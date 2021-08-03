@@ -1,0 +1,24 @@
+{
+  "name": "linivu",
+  "version": "1.0.0",
+  "description": "Linivu React Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linivu/linivu.git"
+  },
+  "keywords": [
+    "Linivu",
+    "React",
+    "Application"
+  ],
+  "author": "Ivan Kleynhans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linivu/linivu/issues"
+  },
+  "homepage": "https://github.com/linivu/linivu#readme"
+}
