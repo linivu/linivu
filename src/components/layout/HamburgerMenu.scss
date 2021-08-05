@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: flex-end;
 
+  // MEDIA QUERIES //
+  @include breakpoint(lg) {
+    display: none;
+  }
+
   %bar-shared {
     background: $white-color;
     border-radius: 10rem;
@@ -52,12 +57,5 @@
   &.open .bar::after {
     bottom: 0;
     transform: rotate(225deg);
-  }
-}
-
-// MEDIA QUERIES //
-@include breakpoint(lg) {
-  .hamburger-menu {
-    display: none;
   }
 }
