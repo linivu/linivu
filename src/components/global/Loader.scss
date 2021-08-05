@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+// LOADER STYLES //
+
+@use '../../scss/config/' as *;
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $home-bg-color;
+  display: grid;
+  place-content: center;
+
+  .dots {
+    height: 1rem;
+    width: 6rem;
+    display: flex;
+    gap: 1rem;
+
+    div {
+      height: 0.6rem;
+      width: 0.6rem;
+      background-color: $white-color;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* dots fade */
+.dots--fade > div {
+  animation: dotsFade 1.6s infinite ease;
+  animation-delay: 0.4s;
+}
+
+.dots--fade > div:nth-of-type(1) {
+  animation-delay: 0.8s;
+}
+
+.dots--fade > div:nth-of-type(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotsFade {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 1;
+  }
+}
