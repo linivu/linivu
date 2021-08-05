@@ -26,7 +26,19 @@ const config = {
       // CSS and SASS
       {
         test: /\.s?a?c?ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['postcss-preset-env'],
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
 
       // Images
@@ -71,21 +83,7 @@ if (task === 'build') {
     clean: true,
   };
 
-  config.module.rules[1].use[0] = {
-    loader: MiniCssExtractPlugin.loader,
-    options: {
-      publicPath: '../../',
-    },
-  };
-
-  config.module.rules[1].use[2] = {
-    loader: 'postcss-loader',
-    options: {
-      postcssOptions: {
-        plugins: ['postcss-preset-env'],
-      },
-    },
-  };
+  config.module.rules[1].use[0] = MiniCssExtractPlugin.loader;
 
   config.plugins = [
     ...config.plugins,
