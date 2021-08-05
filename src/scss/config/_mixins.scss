@@ -1,3 +1,7 @@
 @mixin transitionAll($duration) {
   transition: all $duration ease-in-out;
 }
+
+@mixin transitionCubic($duration) {
+  transition: all $duration cubic-bezier(0.215, 0.61, 0.355, 1);
+}
