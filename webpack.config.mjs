@@ -87,7 +87,17 @@ if (task === 'build') {
 
   config.plugins = [
     ...config.plugins,
-    new MiniCssExtractPlugin({ filename: 'assets/css/[name].styles.[fullhash].css' }),
+    new MiniCssExtractPlugin({
+      filename: 'assets/css/[name].styles.[fullhash].css',
+      insert: (linkTag) => {
+        const preloadLinkTag = document.createElement('link');
+        preloadLinkTag.rel = 'preload';
+        preloadLinkTag.as = 'style';
+        preloadLinkTag.href = linkTag.href;
+        document.head.appendChild(preloadLinkTag);
+        document.head.appendChild(linkTag);
+      },
+    }),
   ];
 }
 
