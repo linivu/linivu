@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////////////////
+// HEADER STYLES //
+
+@use '../../scss/config/' as *;
+
+.header {
+  height: 7rem;
+  background-color: $home-bg-color;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+}
