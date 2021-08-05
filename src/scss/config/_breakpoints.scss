@@ -1,0 +1,46 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default
+
+// Small devices (landscape phones, 576px and up)
+
+// Medium devices (tablets, 768px and up)
+
+// Large devices (desktops, 992px and up)
+
+// X-Large devices (large desktops, 1200px and up)
+
+// XX-Large devices (larger desktops, 1400px and up)
+
+$sm: 36em; // Landscape phones
+$md: 48em; // Tablets
+$lg: 62em; // Laptops
+$xl: 75em; // Desktops
+$xxl: 88em; // Larger desktops
+
+@mixin breakpoint($size) {
+  @if $size == sm {
+    @media (min-width: $sm) {
+      @content;
+    }
+  }
+  @if $size == md {
+    @media (min-width: $md) {
+      @content;
+    }
+  }
+  @if $size == lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  }
+  @if $size == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+  @if $size == xxl {
+    @media (min-width: $xxl) {
+      @content;
+    }
+  }
+}
