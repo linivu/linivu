@@ -1,8 +1,10 @@
 @use '../../scss/config/' as *;
 
 .header {
+  position: relative;
   height: 7rem;
   background-color: $home-bg-color;
+  z-index: 1000;
 
   &__container {
     height: 100%;
