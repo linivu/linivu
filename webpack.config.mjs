@@ -71,7 +71,12 @@ if (task === 'build') {
     clean: true,
   };
 
-  config.module.rules[1].use[0] = MiniCssExtractPlugin.loader;
+  config.module.rules[1].use[0] = {
+    loader: MiniCssExtractPlugin.loader,
+    options: {
+      publicPath: '../../',
+    },
+  };
 
   config.module.rules[1].use[2] = {
     loader: 'postcss-loader',
