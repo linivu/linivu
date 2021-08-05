@@ -54,3 +54,10 @@
     transform: rotate(225deg);
   }
 }
+
+// MEDIA QUERIES //
+@include breakpoint(lg) {
+  .hamburger-menu {
+    display: none;
+  }
+}
