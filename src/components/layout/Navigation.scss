@@ -1,0 +1,51 @@
+@use '../../scss/config/' as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: $header-bg-color;
+  padding: 12rem 4rem 6rem;
+  transform: translateY(-100%);
+  z-index: -1;
+  @include transitionAll(0.5s);
+
+  &.open {
+    transform: translateY(0);
+  }
+
+  &__list {
+    list-style: none;
+    transform: translateY(-4rem);
+    opacity: 0;
+    visibility: hidden;
+
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      @include transitionCubic(0.5s);
+      transition-delay: 0.6s;
+    }
+  }
+
+  li {
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $link-color;
+    font-family: $heading-font;
+    font-weight: 500;
+    line-height: 6;
+    letter-spacing: 0.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
