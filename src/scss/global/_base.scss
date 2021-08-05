@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////
+// BASE STYLES //
+
+@use '../config/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  background-color: $body-bg-color;
+  color: $text-color;
+  font-family: $body-font;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+}
