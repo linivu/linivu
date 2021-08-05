@@ -33,7 +33,7 @@
   li {
     border-top: 1px solid rgba(255, 255, 255, 0.03);
 
-    &:last-child {
+    &:nth-child(4) {
       border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     }
   }
@@ -48,4 +48,19 @@
     text-decoration: none;
     text-transform: uppercase;
   }
+
+  .btn {
+    margin-top: 4rem;
+    transform: translateY(-4rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.open .btn {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  @include transitionCubic(0.5s);
+  transition-delay: 0.7s;
 }
