@@ -1,0 +1,22 @@
+@use '../../scss/config/' as *;
+
+.btn:link,
+.btn:visited,
+.btn:active {
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: $heading-font;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  padding: 1.6rem 3.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &.btn--primary {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
