@@ -139,16 +139,17 @@
       font-size: 1.6rem;
       color: $white-color;
 
-      a {
-        color: inherit;
+      svg {
+        height: 2rem;
+        width: 2rem;
+
+        path {
+          fill: $white-color;
+        }
       }
 
       // MEDIA QUERIES
-      @include screen('tablet') {
-        font-size: 1.8rem;
-      }
       @include screen('laptop') {
-        font-size: 2rem;
         gap: 2.4rem;
       }
     }
