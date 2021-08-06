@@ -1,0 +1,185 @@
+@use '../../scss/config/' as *;
+
+.home {
+  height: calc(100vh - 7rem);
+  background-color: $home-bg-color;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    grid-template-columns: 1.85fr 3.15fr;
+    height: 100vh;
+  }
+
+  &__bg {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    position: relative;
+    height: 48vh;
+    background-image: url(../../images/home-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    // MEDIA QUERIES
+    @include screen('tablet') {
+      height: 64vh;
+    }
+    @include screen('laptop') {
+      height: 100vh;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black-color;
+      opacity: 0.25;
+    }
+
+    .overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, black 10%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0.35;
+    }
+  }
+
+  &__content {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin: 0 10vw;
+    position: relative;
+    z-index: 100;
+    display: grid;
+    grid-template-rows: 4fr min-content 1fr min-content 1.5fr;
+
+    // MEDIA QUERIES
+    @include screen('lg phone', landscape) {
+      grid-template-rows: 0.5fr min-content 0.5fr min-content 1fr;
+    }
+    @include screen('tablet') {
+      grid-template-rows: 4fr min-content 1fr min-content 1.5fr;
+    }
+    @include screen('laptop', landscape) {
+      grid-template-rows: 2fr min-content 0.5fr min-content 1.75fr;
+    }
+    @include screen('lg laptop') {
+      grid-template-rows: 3.75fr min-content 0.5fr min-content 1.75fr;
+    }
+
+    &-box {
+      grid-row: 2 / 3;
+      display: grid;
+      grid-template-columns: min-content;
+    }
+
+    &-heading {
+      color: $primary-color;
+      font-size: 9.8rem;
+      letter-spacing: -0.4rem;
+      transform: translateX(-0.8rem);
+      line-height: 1;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        font-size: 14.2rem;
+      }
+      @include screen('laptop') {
+        font-size: 15.8rem;
+      }
+      @include screen('lg laptop') {
+        font-size: 17rem;
+      }
+      @include screen('desktop') {
+        font-size: 21rem;
+      }
+
+      &::before {
+        display: block;
+        content: '';
+        height: 10rem;
+        width: 20rem;
+        background-image: url(../../images/dots.svg);
+        transform: translateX(-2rem);
+        opacity: 0.25;
+        position: absolute;
+        bottom: 0.14em;
+      }
+    }
+
+    &-description {
+      color: $white-color;
+      font-family: $heading-font;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        font-size: 3rem;
+      }
+      @include screen('laptop') {
+        font-size: 3.6rem;
+      }
+    }
+
+    &-social {
+      grid-row: 4 / 5;
+      display: flex;
+      gap: 1.6rem;
+      font-size: 1.6rem;
+      color: $white-color;
+
+      a {
+        color: inherit;
+      }
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        font-size: 1.8rem;
+      }
+      @include screen('laptop') {
+        font-size: 2rem;
+        gap: 2.4rem;
+      }
+    }
+
+    .scroll {
+      grid-row: 3 / 6;
+      justify-self: end;
+      writing-mode: vertical-lr;
+      letter-spacing: 0.4rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $text-color;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        grid-row: 5 / 6;
+        justify-self: start;
+        align-self: center;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 12rem;
+        height: 20rem;
+        width: 0.1rem;
+        background: $primary-color;
+      }
+    }
+  }
+}
