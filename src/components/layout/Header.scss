@@ -6,6 +6,15 @@
   background-color: $home-bg-color;
   z-index: 1000;
 
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+
   &__container {
     height: 100%;
     display: flex;
@@ -13,5 +22,10 @@
     justify-content: space-between;
     max-width: 90vw;
     margin: 0 auto;
+
+    // MEDIA QUERIES
+    @include screen('laptop') {
+      gap: 8rem;
+    }
   }
 }
