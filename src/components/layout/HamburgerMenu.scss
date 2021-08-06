@@ -9,11 +9,6 @@
   align-items: center;
   justify-content: flex-end;
 
-  // MEDIA QUERIES //
-  @include breakpoint(lg) {
-    display: none;
-  }
-
   %bar-shared {
     background: $white-color;
     border-radius: 10rem;
