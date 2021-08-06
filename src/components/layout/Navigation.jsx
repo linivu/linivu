@@ -13,18 +13,18 @@ const Navigation = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav className={`nav ${isOpen ? 'open' : ''}`}>
-      <ul className={`nav__list ${isOpen ? 'open' : ''}`}>
+      <div className={`nav__list ${isOpen ? 'open' : ''}`}>
         {navLinks.map((link, i) => (
-          <li key={i}>
+          <span key={i}>
             <a href={`#${link}`} className="nav__link" onClick={onClickHandler}>
               {link}
             </a>
-          </li>
+          </span>
         ))}
         <Button href="mailto:info@linivu.com" className="btn btn--primary">
           Get In Touch
         </Button>
-      </ul>
+      </div>
     </nav>
   );
 };
