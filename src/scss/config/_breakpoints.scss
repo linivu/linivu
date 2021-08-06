@@ -1,45 +1,33 @@
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default
+@use 'sass:math';
+@use 'sass:string';
 
-// Small devices (landscape phones, 576px and up)
+$breakpoints: (
+  'phone': 425px,
+  'lg phone': 578px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'lg laptop': 1200px,
+  'desktop': 1400px,
+  'lg desktop': 1800px,
+) !default;
 
-// Medium devices (tablets, 768px and up)
+@function size($args...) {
+  $size: (math.div(map-get($breakpoints, nth($args, 1)), 16px) * 1em);
+  @return $size;
+}
 
-// Large devices (desktops, 992px and up)
+@function orientation($args...) {
+  $orientation: nth($args, 2);
+  @return $orientation;
+}
 
-// X-Large devices (large desktops, 1200px and up)
-
-// XX-Large devices (larger desktops, 1400px and up)
-
-$sm: 36em; // Landscape phones
-$md: 48em; // Tablets
-$lg: 62em; // Laptops
-$xl: 75em; // Desktops
-$xxl: 88em; // Larger desktops
-
-@mixin breakpoint($size) {
-  @if $size == sm {
-    @media (min-width: $sm) {
+@mixin screen($args...) {
+  @if index($args, portrait) or index($args, landscape) {
+    @media screen and (min-width: size($args...)) and (orientation: orientation($args...)) {
       @content;
     }
-  }
-  @if $size == md {
-    @media (min-width: $md) {
-      @content;
-    }
-  }
-  @if $size == lg {
-    @media (min-width: $lg) {
-      @content;
-    }
-  }
-  @if $size == xl {
-    @media (min-width: $xl) {
-      @content;
-    }
-  }
-  @if $size == xxl {
-    @media (min-width: $xxl) {
+  } @else {
+    @media screen and (min-width: size($args...)) {
       @content;
     }
   }
