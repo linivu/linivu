@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: flex-end;
 
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    display: none;
+  }
+
   %bar-shared {
     background: $white-color;
     border-radius: 10rem;
