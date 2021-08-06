@@ -19,13 +19,23 @@ const Home = () => {
           </p>
         </div>
         <div className="home__content-social">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener"
+            title="facebook"
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="https://www.inkedin.com" target="_blank" rel="noopener">
+          <a
+            href="https://www.inkedin.com"
+            target="_blank"
+            rel="noopener"
+            title="linkedin"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="https://www.github.com" target="_blank" rel="noopener">
+          <a href="https://www.github.com" target="_blank" rel="noopener" title="github">
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
