@@ -7,7 +7,11 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
   };
 
   return (
-    <button className={`hamburger-menu ${isOpen ? 'open' : ''}`} onClick={onClickHandler}>
+    <button
+      className={`hamburger-menu ${isOpen ? 'open' : ''}`}
+      onClick={onClickHandler}
+      title="menu toggle"
+    >
       <span className="bar"></span>
     </button>
   );
