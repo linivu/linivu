@@ -71,6 +71,7 @@
     }
     @include screen('laptop', landscape) {
       grid-template-rows: 2fr min-content 0.5fr min-content 1.75fr;
+      margin: 0 12.5vw;
     }
     @include screen('lg laptop') {
       grid-template-rows: 3.75fr min-content 0.5fr min-content 1.75fr;
