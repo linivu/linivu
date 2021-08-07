@@ -1,0 +1,30 @@
+@use '../config/' as *;
+
+section:not(:first-child) {
+  padding: 12.8rem 0 1.2rem;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    padding: 22rem 0 2.4rem;
+  }
+}
+
+.container {
+  height: 100%;
+  max-width: 85vw;
+  margin: 0 auto;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    max-width: 75vw;
+  }
+  @include screen('lg laptop') {
+    max-width: 70vw;
+  }
+  @include screen('desktop') {
+    max-width: 65vw;
+  }
+  @include screen('lg desktop') {
+    max-width: 60vw;
+  }
+}
