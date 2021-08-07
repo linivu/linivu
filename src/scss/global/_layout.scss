@@ -16,15 +16,27 @@ section:not(:first-child) {
 
   // MEDIA QUERIES
   @include screen('laptop') {
-    max-width: 75vw;
+    max-width: 80vw;
   }
   @include screen('lg laptop') {
-    max-width: 70vw;
+    max-width: 75vw;
   }
   @include screen('desktop') {
-    max-width: 65vw;
+    max-width: 70vw;
   }
   @include screen('lg desktop') {
     max-width: 60vw;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
   }
 }
