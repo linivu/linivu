@@ -30,4 +30,23 @@
       max-width: 80vw;
     }
   }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    height: 7rem;
+    width: 100%;
+    background-color: $header-bg-color;
+    animation: fadeInDown 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
