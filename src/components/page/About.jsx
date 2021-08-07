@@ -6,15 +6,15 @@ const About = () => {
     <section id="about" className="about">
       <div className="container">
         <div className="section-title" data-num="01">
-          <h3 className="section-title__description">Who We Are</h3>
+          <h2 className="section-title__description">Who We Are</h2>
         </div>
 
         <div className="grid">
           <div className="about__intro">
-            <h2 className="main-title">
+            <h3 className="main-title">
               Linivu is a small web design studio based in Cape Town. We are dedicated to
               building great digital products and experiences.
-            </h2>
+            </h3>
             <p className="lead">
               We take a structured approach to web design. Our development process was
               created to ensure every project is delivered on-time and on-budget. Once
