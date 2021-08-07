@@ -49,6 +49,9 @@ const Home = () => {
           Scroll Down
         </a>
       </div>
+      <a href="#" className="top">
+        top
+      </a>
     </section>
   );
 };
