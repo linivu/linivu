@@ -184,4 +184,28 @@
       }
     }
   }
+
+  .top {
+    height: 5rem;
+    width: 5rem;
+    background-color: $black-color;
+    border-radius: 50%;
+    border: 1px solid $white-color;
+    color: $white-color;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 4%;
+    bottom: 2%;
+    z-index: 9000;
+    transform: scale(0);
+    @include transitionCubic(0.3s);
+  }
+}
+
+.sticky ~ .main .home .top {
+  transform: scale(1);
 }
