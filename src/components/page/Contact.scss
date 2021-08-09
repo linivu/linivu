@@ -12,7 +12,7 @@
     font-family: $heading-font;
     color: $white-color;
     text-decoration: none;
-    margin: 2.4rem 0;
+    margin: 2.4rem 0 6.4rem;
     font-weight: 500;
 
     // MEDIA QUERIES
@@ -21,6 +21,7 @@
     }
     @include screen('laptop') {
       font-size: 9.8rem;
+      margin: 6.4rem 0 9.6rem;
     }
   }
 }
