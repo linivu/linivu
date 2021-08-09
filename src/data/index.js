@@ -46,28 +46,24 @@ const data = {
     items: [
       {
         no: 1,
-        icon: '3c0d0483de426f672233.svg',
         heading: 'Web Design',
         description:
           'Our web design services can help rediscover your business’s image on the internet marketplace. The blending of style and technology we offer in conjunction with our expertise enables your business to succeed on the internet.',
       },
       {
         no: 2,
-        icon: '5bcebb1288108cbc197c.svg',
         heading: 'Development',
         description:
           'We utilizes web development technologies that are both proven and practical. With the options available in the market today, we can help you determine what is best for your needs.',
       },
       {
         no: 3,
-        icon: 'c8fe44d8ac5c990093fc.svg',
         heading: 'Branding',
         description:
           'We understands your company identity impacts your bottom line. A positive company and product identity enhances your sales and your entire marketing communications plan. A strong company identity can enhance, create, and project an image that will help you sell your product or service.',
       },
       {
         no: 4,
-        icon: '8a03425a1c35fedbfcc0.svg',
         heading: 'SEO',
         description:
           'Today’s consumer puts a lot of trust in search engines to find what they need.Those searches involve finding products, reviewing brands, and looking up business locations. And when a brand appears on the first page of search results, it earns trust from consumers.',
