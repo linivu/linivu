@@ -41,6 +41,11 @@ const config = {
         ],
       },
 
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+
       // Images
       {
         test: /\.(png|svg|jpe?g|mp4)$/i,
