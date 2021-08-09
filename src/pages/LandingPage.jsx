@@ -4,6 +4,7 @@ import stickyNavbar from '../utilities/stickyNavbar';
 // COMPONENTS //
 import Home from '../components/page/Home';
 import About from '../components/page/About';
+import Services from '../components/page/Services';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const LandingPage = () => {
     <main className="main">
       <Home />
       <About />
+      <Services />
     </main>
   );
 };
