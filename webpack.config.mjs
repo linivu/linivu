@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 const task = process.env.npm_lifecycle_event;
 
@@ -97,6 +98,10 @@ if (task === 'build') {
         document.head.appendChild(preloadLinkTag);
         document.head.appendChild(linkTag);
       },
+    }),
+
+    new CopyPlugin({
+      patterns: [{ from: 'public/robots.txt', to: 'robots.txt' }],
     }),
   ];
 }
