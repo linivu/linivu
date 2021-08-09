@@ -25,7 +25,11 @@ const Services = () => {
         <div className="grid">
           {data.services.items.map((item) => (
             <div className="service__item" key={item.no}>
-              <img src={item.icon} className="services__item-icon"></img>
+              <img
+                src={item.icon}
+                alt={item.heading}
+                className="services__item-icon"
+              ></img>
               <h2 className="services__item-heading">{item.heading}</h2>
               <p className="services__item-description">{item.description}</p>
             </div>
