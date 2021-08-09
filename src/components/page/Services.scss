@@ -19,13 +19,29 @@
 
   &__item {
     &-icon {
-      height: 6rem;
-      width: 6rem;
+      height: 5rem;
+      width: 5rem;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 1.6rem;
 
       // MEDIA QUERIES
       @include screen('tablet') {
-        height: 7rem;
-        width: 7rem;
+        height: 6rem;
+        width: 6rem;
+      }
+
+      &.web {
+        background-image: url(../../images/icons/design.svg);
+      }
+      &.development {
+        background-image: url(../../images/icons/development.svg);
+      }
+      &.branding {
+        background-image: url(../../images/icons/branding.svg);
+      }
+      &.seo {
+        background-image: url(../../images/icons/seo.svg);
       }
     }
 
