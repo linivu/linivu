@@ -1,0 +1,54 @@
+@use '../../scss/config/' as *;
+
+.services {
+  .container {
+    .grid:nth-child(2) {
+      gap: 0;
+      margin-bottom: 4rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        gap: 6rem;
+        margin-bottom: 6rem;
+      }
+      @include screen('lg desktop') {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+
+  &__item {
+    &-icon {
+      height: 6rem;
+      width: 6rem;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+
+    &-heading {
+      color: $white-color;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        font-size: 2.4rem;
+      }
+    }
+
+    &-description {
+      font-size: 1.6rem;
+      line-height: 1.8;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
