@@ -1,8 +1,8 @@
 // DATA //
 import data from '../../data';
 
-// IMAGES //
 import design from '../../images/icons/design.svg';
+import branding from '../../images/icons/branding.svg';
 import development from '../../images/icons/development.svg';
 import seo from '../../images/icons/seo.svg';
 
@@ -10,6 +10,7 @@ import seo from '../../images/icons/seo.svg';
 import './Services.scss';
 
 const Services = () => {
+  // console.log(design);
   return (
     <section id="services" className="services">
       <div className="container">
