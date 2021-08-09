@@ -79,7 +79,7 @@ if (task === 'build') {
 
   config.output = {
     filename: 'assets/js/[name].bundle.[fullhash].js',
-    assetModuleFilename: 'assets/images/[name].[hash][ext][query]',
+    assetModuleFilename: 'assets/images/[hash][ext][query]',
     clean: true,
   };
 
