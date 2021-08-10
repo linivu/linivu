@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import smoothScroll from '../../utilities/smoothScroll';
 import stickyNavbar from '../../utilities/stickyNavbar';
+import scrollAware from '../../utilities/scrollAware';
 
 // STYLES //
 import './Home.scss';
@@ -11,6 +12,7 @@ const Home = () => {
     smoothscroll.polyfill();
     smoothScroll();
     stickyNavbar();
+    scrollAware();
   }, []);
 
   return (
