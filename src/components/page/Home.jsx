@@ -13,7 +13,7 @@ const Home = () => {
     smoothScroll();
     stickyNavbar();
     scrollAware();
-  }, []);
+  });
 
   return (
     <section id="home" className="home">
