@@ -1,7 +1,7 @@
 // STYLES //
 import './Button.scss';
 
-const Button = ({ type, href, className, children }) => {
+const Button = ({ type, href, className, children, onClick }) => {
   if (type === 'button' || type === 'submit') {
     return (
       <button type={type} className={className}>
@@ -10,7 +10,7 @@ const Button = ({ type, href, className, children }) => {
     );
   } else {
     return (
-      <a href={href} className={className}>
+      <a href={href} className={className} onClick={onClick}>
         {children}
       </a>
     );
