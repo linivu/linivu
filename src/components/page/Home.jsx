@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
+import smoothScroll from '../../utilities/smoothScroll';
 import stickyNavbar from '../../utilities/stickyNavbar';
 
 // STYLES //
@@ -6,6 +8,8 @@ import './Home.scss';
 
 const Home = () => {
   useEffect(() => {
+    smoothscroll.polyfill();
+    smoothScroll();
     stickyNavbar();
   }, []);
 
@@ -52,11 +56,11 @@ const Home = () => {
             </svg>
           </a>
         </div>
-        <a href="#about" className="scroll">
+        <a href="#about" className="scroll link">
           Scroll Down
         </a>
       </div>
-      <a href="#" className="top">
+      <a href="#" className="top link">
         top
       </a>
     </section>
