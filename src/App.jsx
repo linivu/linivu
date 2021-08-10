@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 import Loader from './components/global/Loader';
 import Header from './components/layout/Header';
 const LandingPage = lazy(() => import('./pages/LandingPage'));
-const Footer = lazy(() => import('./components/layout/Footer'));
+import Footer from './components/layout/Footer';
 
 // STYLES //
 import './App.scss';
