@@ -16,7 +16,11 @@ const Navigation = ({ isOpen, setIsOpen }) => {
       <div className={`nav__list ${isOpen ? 'open' : ''}`}>
         {navLinks.map((link, i) => (
           <span key={i}>
-            <a href={`#${link}`} className="nav__link link" onClick={onClickHandler}>
+            <a
+              href={`#${link}`}
+              className={`nav__link link ${link}-link`}
+              onClick={onClickHandler}
+            >
               {link}
             </a>
           </span>
