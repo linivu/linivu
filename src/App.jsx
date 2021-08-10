@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 
 // COMPONENTS //
 import Loader from './components/global/Loader';
-const Header = lazy(() => import('./components/layout/Header'));
+import Header from './components/layout/Header';
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const Footer = lazy(() => import('./components/layout/Footer'));
 
