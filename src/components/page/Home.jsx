@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
+import stickyNavbar from '../../utilities/stickyNavbar';
+
 // STYLES //
 import './Home.scss';
 
 const Home = () => {
+  useEffect(() => {
+    stickyNavbar();
+  }, []);
+
   return (
     <section id="home" className="home">
       <div className="home__bg">
