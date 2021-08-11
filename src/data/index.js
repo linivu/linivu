@@ -70,6 +70,25 @@ const data = {
       },
     ],
   },
+
+  works: {
+    items: [
+      {
+        no: 1,
+        type: 'Web App',
+        name: 'Discovr',
+        image: 'e46400b9c840690e0625.png',
+        preview: 'https://discovr.linivu.com',
+      },
+      {
+        no: 2,
+        type: 'Website',
+        name: 'Omnifood',
+        image: 'c9fdf5543a945d0f6b47.png',
+        preview: 'https://omnifood.linivu.com',
+      },
+    ],
+  },
 };
 
 export default data;
