@@ -7,12 +7,14 @@ const scrollAware = () => {
     selectElementByClass('home'),
     selectElementByClass('about'),
     selectElementByClass('services'),
+    selectElementByClass('works'),
   ];
 
   const navItems = {
     home: selectElementByClass('home-link'),
     about: selectElementByClass('about-link'),
     services: selectElementByClass('services-link'),
+    works: selectElementByClass('works-link'),
   };
 
   // Intersection observer setup
