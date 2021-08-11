@@ -1,3 +1,4 @@
+import data from '../../data';
 import discovr from '../../images/discovr.png';
 import omnifood from '../../images/omnifood.png';
 
@@ -19,38 +20,24 @@ const Works = () => {
         </div>
 
         <div className="grid">
-          <div className="works__item">
-            <img src={discovr} alt="works item img" width="768" height="465" />
-            <div className="overlay"></div>
-            <div className="works__item-intro">
-              <p className="type">Web App</p>
-              <p className="name">Discovr</p>
+          {data.works.items.map((item) => (
+            <div className="works__item" key={item.no}>
+              <img src={item.image} alt="works item img" width="768" height="465" />
+              <div className="overlay"></div>
+              <div className="works__item-intro">
+                <p className="type">{item.type}</p>
+                <p className="name">{item.name}</p>
+              </div>
+              <a
+                href={item.preview}
+                target="_blank"
+                rel="noopener"
+                className="works__item-preview"
+              >
+                Preview
+              </a>
             </div>
-            <a
-              href="https://discovr.linivu.com"
-              target="_blank"
-              rel="noopener"
-              className="works__item-preview"
-            >
-              Preview
-            </a>
-          </div>
-          <div className="works__item">
-            <img src={omnifood} alt="works item img" width="768" height="465" />
-            <div className="overlay"></div>
-            <div className="works__item-intro">
-              <p className="type">Website</p>
-              <p className="name">Omnifood</p>
-            </div>
-            <a
-              href="https://omnifood.linivu.com"
-              target="_blank"
-              rel="noopener"
-              className="works__item-preview"
-            >
-              Preview
-            </a>
-          </div>
+          ))}
         </div>
       </div>
     </section>
