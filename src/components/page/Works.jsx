@@ -1,6 +1,6 @@
 import data from '../../data';
-import discovr from '../../images/discovr.png';
-import omnifood from '../../images/omnifood.png';
+import discovr from '../../images/discovr.jpg';
+import omnifood from '../../images/omnifood.jpg';
 
 // STYLES //
 import './Works.scss';
