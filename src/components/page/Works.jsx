@@ -20,7 +20,7 @@ const Works = () => {
 
         <div className="grid">
           <div className="works__item">
-            <img src={discovr} alt="works item img" />
+            <img src={discovr} alt="works item img" width="768" height="465" />
             <div className="overlay"></div>
             <div className="works__item-intro">
               <p className="type">Web App</p>
@@ -36,7 +36,7 @@ const Works = () => {
             </a>
           </div>
           <div className="works__item">
-            <img src={omnifood} alt="works item img" />
+            <img src={omnifood} alt="works item img" width="768" height="465" />
             <div className="overlay"></div>
             <div className="works__item-intro">
               <p className="type">Website</p>
