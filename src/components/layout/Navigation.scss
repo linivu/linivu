@@ -106,6 +106,9 @@
     transform: translateY(-4rem);
     opacity: 0;
     visibility: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 
     // MEDIA QUERIES
     @include screen('phone', landscape) {
@@ -122,6 +125,10 @@
       margin-left: auto;
       padding: 1.2rem 2.4rem;
     }
+  }
+
+  .plane {
+    height: 1.6rem;
   }
 }
 
