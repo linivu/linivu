@@ -1,3 +1,6 @@
+import discovr from '../images/discovr.jpg';
+import omnifood from '../images/omnifood.jpg';
+
 const data = {
   about: {
     title: 'Who We Are',
@@ -77,14 +80,14 @@ const data = {
         no: 1,
         type: 'Web App',
         name: 'Discovr',
-        image: 'assets/images/41c878e0255c1ccd1590.jpg',
+        image: discovr,
         preview: 'https://discovr.linivu.com',
       },
       {
         no: 2,
         type: 'Website',
         name: 'Omnifood',
-        image: 'assets/images/bb9781a6f45ead1f6903.jpg',
+        image: omnifood,
         preview: 'https://omnifood.linivu.com',
       },
     ],
