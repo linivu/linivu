@@ -21,7 +21,7 @@ const Home = () => {
         <div className="overlay"></div>
       </div>
 
-      <div className="home__content">
+      <div className="home__content" data-animate="fade-up">
         <div className="home__content-box">
           <h1 className="home__content-heading">Hello.</h1>
           <p className="home__content-description">
