@@ -8,18 +8,22 @@ const Services = () => {
   return (
     <section id="services" className="services">
       <div className="container">
-        <div className="section-title" data-num="02">
+        <div className="section-title" data-num="02" data-animate="fade-up">
           <h2 className="section-title__description">{data.services.title}</h2>
         </div>
 
         <div className="grid">
-          <h3 className="main-title">{data.services.mainTitle}</h3>
-          <p className="lead">{data.services.lead}</p>
+          <h3 className="main-title" data-animate="fade-up">
+            {data.services.mainTitle}
+          </h3>
+          <p className="lead" data-animate="fade-up">
+            {data.services.lead}
+          </p>
         </div>
 
         <div className="grid">
           {data.services.items.map((item) => (
-            <div className="service__item" key={item.no}>
+            <div className="service__item" key={item.no} data-animate="fade-up">
               <div
                 className={`services__item-icon ${item.heading
                   .split(' ')[0]
