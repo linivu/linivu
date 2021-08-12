@@ -27,7 +27,7 @@ const data = {
         no: 3,
         heading: 'Build',
         description:
-          "At the same time, we'll kick off the technical side of the web design process. This will include deploying your CMS, creating your custom theme and page designs, and setting up your website's analytics.",
+          "At the same time, we'll kick off the technical side of the web design process. This will include deploying your CMS, creating your custom website and page designs, and setting up your website's analytics.",
       },
       {
         no: 4,
