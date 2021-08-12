@@ -6,7 +6,7 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: $black-color;
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -16,6 +16,7 @@
     opacity: 1;
     visibility: visible;
     transform: scale(1);
+    @include transitionAll(0.5s);
   }
 
   span {
