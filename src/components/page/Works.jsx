@@ -1,9 +1,23 @@
+import { useState } from 'react';
+
+// DATA //
 import data from '../../data';
+
+// COMPONENTS //
+import Modal from '../global/Modal';
 
 // STYLES //
 import './Works.scss';
 
 const Works = () => {
+  const [dataSet, setDataSet] = useState('');
+  const [open, setOpen] = useState(false);
+
+  const onClickHandler = (e) => {
+    setDataSet(e.target.dataset.item);
+    setOpen(!open);
+  };
+
   return (
     <section id="works" className="works">
       <div className="container">
@@ -21,7 +35,11 @@ const Works = () => {
           {data.works.items.map((item) => (
             <div className="works__item" key={item.no}>
               <img src={item.image} alt="works item img" width="768" height="465" />
-              <div className="overlay"></div>
+              <div
+                className="overlay"
+                data-item={item.no}
+                onClick={(e) => onClickHandler(e)}
+              ></div>
               <div className="works__item-intro">
                 <p className="type">{item.type}</p>
                 <p className="name">{item.name}</p>
@@ -38,6 +56,7 @@ const Works = () => {
           ))}
         </div>
       </div>
+      <Modal items={data.works.items} dataSet={dataSet} open={open} setOpen={setOpen} />
     </section>
   );
 };
