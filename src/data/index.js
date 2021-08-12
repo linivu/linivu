@@ -82,6 +82,8 @@ const data = {
         name: 'Discovr',
         image: discovr,
         preview: 'https://discovr.linivu.com',
+        caption:
+          'Web application for tour company wanting to increase their web presence and online bookings of their popular tours.',
       },
       {
         no: 2,
@@ -89,6 +91,8 @@ const data = {
         name: 'Omnifood',
         image: omnifood,
         preview: 'https://omnifood.linivu.com',
+        caption:
+          'Modern website for tech food company, they launched an online food order website. ',
       },
     ],
   },
