@@ -98,6 +98,14 @@
       letter-spacing: 0.4rem;
       display: block;
       margin-bottom: 2.4rem;
+      border: 1px solid transparent;
+      @include transitionAll(0.3s);
+
+      &:hover {
+        background-color: $black-color;
+        color: $white-color;
+        border: 1px solid $white-color;
+      }
     }
 
     .copy {
