@@ -1,0 +1,86 @@
+@use '../../scss/config/' as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  span {
+    position: fixed;
+    top: 2%;
+    left: 5%;
+    font-size: 1.4rem;
+  }
+
+  .close {
+    position: fixed;
+    right: 5%;
+    top: 2%;
+    height: 2.6rem;
+    cursor: pointer;
+
+    path {
+      stroke: $primary-color;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+
+    img {
+      max-width: 85%;
+      justify-self: center;
+
+      // MEDIA QUERIES
+      @include screen('lg phone', landscape) {
+        max-width: 50%;
+      }
+      @include screen('laptop') {
+        max-width: 85%;
+      }
+    }
+
+    h2 {
+      color: $white-color;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      width: 80%;
+      justify-self: center;
+      font-size: 1.4rem;
+    }
+
+    a {
+      text-align: center;
+      color: $white-color;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-family: $heading-font;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      border-bottom: 1px solid $primary-color;
+      justify-self: center;
+    }
+  }
+}
